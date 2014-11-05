@@ -1,0 +1,15 @@
+{
+  "name": "intpp/system-info",
+  "description": "Information about the server",
+  "minimum-stability": "dev",
+  "license": "BSD",
+  "authors": [
+    {
+      "name": "intpp",
+      "email": "intpplus@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": { "intpp\\system\\": "" }
+  }
+}
