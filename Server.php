@@ -31,6 +31,3 @@ class Server
         return __NAMESPACE__ . '\os\Common';
     }
 }
-
-$systemInfo = Server::getInfo();
-var_dump($systemInfo::getName());
