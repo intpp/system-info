@@ -7,8 +7,10 @@ Usage
 ===========
 
 ```php
+    // Get the class to work with the current operating system
     $system = Server::getInfo();
     
+    // Captain Obvious was here
     $system::getName();
     $system::getVersion();
     ...
