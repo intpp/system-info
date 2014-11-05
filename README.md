@@ -16,3 +16,11 @@ Usage
     ...
     $system::getUptime();
 ```
+
+#### Install via composer
+```
+    "require": {
+        ...
+        "intpp/system-info": "*"
+    },
+```
