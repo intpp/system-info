@@ -26,6 +26,8 @@ class Server
             return __NAMESPACE__ . '\os\Linux';
         } elseif(strpos($systemName, 'darwin') !== false) {
             return __NAMESPACE__ . '\os\Macintosh';
+        } elseif(strpos($systemName, 'bsd') !== false) {
+            return __NAMESPACE__ . '\os\BSD';
         }
 
         return __NAMESPACE__ . '\os\Common';

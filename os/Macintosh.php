@@ -7,6 +7,6 @@ namespace intpp\system\os;
  * @package intpp\system\os
  * @author intpp<intpplus@gmail.com>
  */
-class Macintosh extends Common
+class Macintosh extends BSD
 {
 }
