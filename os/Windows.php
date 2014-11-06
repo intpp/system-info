@@ -12,9 +12,17 @@ class Windows extends Common
 
     public static function getUptime($formatted = false, $format = '%a days, %h hours, %i minutes and %s seconds')
     {
-        $startTime = filemtime('C:\pagefile.sys');
+        $startTime = false;
+        $data = shell_exec('net statistics server');
+        $lines = explode("\n", $data);
+        foreach ($lines as $line) {
+            if (preg_match('/\d{1,2}\:\d{2}\:\d{2}/i', $line)) {
+                $startTime = strtotime(trim(preg_replace('/[^\d\:\. ]+/i', '', $line)));
+                break;
+            }
+        }
 
-        if($startTime === false) {
+        if ($startTime === false) {
             return 0;
         }
 
